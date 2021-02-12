@@ -39,10 +39,10 @@ pipeline {
       }
       stage('subir no dockerhub'){
           steps{
-              
+             script{ 
                   docker.withRegistry("", registryCredentials){
                       imagem.push
-               
+               }
               }
           }
       }
