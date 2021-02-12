@@ -48,10 +48,5 @@ pipeline {
       }
     }  
       
-    post{
-      cleanup{
-          sh "docker image rmi $registry:$BUILD_NUMBER"
-      }
-    }
     
 }
